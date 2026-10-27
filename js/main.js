@@ -19,6 +19,19 @@
     if (el) goal(el.getAttribute('data-goal'));
   });
 
+  // Видео: вставляем плеер YouTube только по клику
+  document.querySelectorAll('button.video[data-yt]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var frame = document.createElement('iframe');
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + btn.getAttribute('data-yt') + '?autoplay=1&rel=0';
+      frame.title = 'Видеообзор хумуса «Перекусов» от шефа Ивлева';
+      frame.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+      frame.allowFullscreen = true;
+      frame.className = 'video__frame';
+      btn.replaceWith(frame);
+    });
+  });
+
   // Фильтр каталога
   var tabs = document.querySelectorAll('.tab[data-filter]');
   tabs.forEach(function (tab) {

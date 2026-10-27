@@ -218,6 +218,21 @@ a.chip:hover { border-color: var(--green); }
 .page-head p { font-size: 19px; color: var(--muted); max-width: 760px; }
 .note { font-size: 14px; color: var(--soft); }
 .map { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--cream); }
+.hero__photo { width: 100%; height: auto; border-radius: 24px; box-shadow: 0 18px 40px #0A4A1C26; }
+.product__media--photo { padding: 0; background: #F4F4F2; }
+.product__media--photo img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.video { position: relative; display: block; width: 100%; padding: 0; border: 0; border-radius: 20px; overflow: hidden; cursor: pointer; background: #000; aspect-ratio: 16 / 9; color: #fff; text-decoration: none; }
+.video img { width: 100%; height: 100%; object-fit: cover; opacity: .82; transition: opacity .2s; }
+.video:hover img, .video:focus-visible img { opacity: 1; }
+.video__play { position: absolute; left: 50%; top: 50%; width: 84px; height: 84px; margin: -42px 0 0 -42px; border-radius: 50%; background: var(--orange); box-shadow: 0 8px 24px #0006; }
+.video__play::after { content: ''; position: absolute; left: 34px; top: 26px; border-style: solid; border-width: 16px 0 16px 26px; border-color: transparent transparent transparent var(--ink); }
+.video__label { position: absolute; left: 0; right: 0; bottom: 16px; text-align: center; font: 700 16px/1 var(--font-head); text-shadow: 0 2px 8px #000a; }
+.video__frame { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 20px; }
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.gallery figure { margin: 0; }
+.gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); }
+.gallery figcaption { font-size: 14px; color: var(--soft); margin-top: 6px; }
+@media (max-width: 900px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
 .pilot-bar { background: var(--orange); color: var(--ink); text-align: center; font-size: 14px; font-weight: 600; padding: 8px 16px; }
 .map-link { display: grid; gap: 8px; justify-items: start; }
 .map iframe { display: block; width: 100%; height: 420px; border: 0; }
